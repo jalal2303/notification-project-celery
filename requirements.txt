@@ -19,3 +19,5 @@ gunicorn==23.0.0
 
 # Env management
 python-decouple==3.8
+python-dotenv==1.0.1
+
