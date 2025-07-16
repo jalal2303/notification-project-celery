@@ -6,6 +6,7 @@ from django.conf import settings
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mailproject.settings")
 
 app = Celery("mailproject")
+print("🔍 CELERY_BROKER_URL:", os.getenv("REDIS_URL"))  # ✅ debug here
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
