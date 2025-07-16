@@ -19,6 +19,3 @@ gunicorn==23.0.0
 
 # Env management
 python-decouple==3.8
-
-# MySQL connector (if you're using MySQL)
-mysqlclient==2.2.7
