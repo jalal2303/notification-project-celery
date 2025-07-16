@@ -6,9 +6,8 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 🌍 Load environment from correct resource file
-ENV_NAME = os.getenv("PROJECT_ENV", "rentgeniux")
-ENV_PATH = BASE_DIR / "resources" / f"env_{ENV_NAME}"
-load_dotenv(dotenv_path=ENV_PATH)
+from dotenv import load_dotenv
+load_dotenv()  # just load default .env from environment (Railway injects vars)
 
 # 🔐 Security
 SECRET_KEY = os.getenv("SECRET_KEY", "insecure-key")
